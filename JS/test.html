@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit profile</title>
+    <script>
+      function validate() {
+        var flag = true;
+        var username = document.myform.username.value;
+        var password = document.myform.pwd.value;
+        var phone = document.myform.phone.value;
+        var address = document.myform.address.value;
+
+        if (
+          (username === "") |
+          (password === "") |
+          (phone === "") |
+          (address === "")
+        ) {
+          alert("empty");
+          flag = false;
+        }
+
+        var phonePattern = /^\d{10}$/;
+        if (!phone.match(phonePattern)) {
+          alert("in p");
+          flag = false;
+        }
+
+        var usernamePattern = /^[a-z][A-Z]+$/;
+        if (!username.match(usernamePattern)) {
+          alert("in u");
+          flag = false;
+        }
+
+        var passwordPattern = /^[A-Z][a-zA-Z0-9]+$/;
+        if (!password.match(passwordPattern)) {
+          alert("in p");
+          flag = false;
+        }
+
+        if (flag) {
+          alert("valid");
+        } else {
+          alert("invalid");
+        }
+      }
+    </script>
+  </head>
+  <body bgcolor="#ffd0ff" text="#000000">
+    <h3 style="text-align: center">Edit your profile here</h3>
+    <form name="myform">
+      <div style="text-align: center">
+        <label>Edit Username: <input type="text" name="username" /></label
+        ><br />
+        <label>Edit password; <input type="password" name="pwd" /></label><br />
+        <label>Edit phone number: <input type="tel" name="phone" /></label
+        ><br />
+        <label>Edit address: <input type="text" name="address" /></label><br />
+      </div>
+      <div style="text-align: center">
+        <input type="button" value="ok" onClick="validate()" />
+        <input type="reset" value="clear" />
+      </div>
+    </form>
+  </body>
+</html>

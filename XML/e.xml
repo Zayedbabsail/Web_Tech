@@ -1,0 +1,17 @@
+<employees>
+    <employee id="111">
+        <firstName>Chandrika</firstName>
+        <lastName>Gupta</lastName>
+        <location>India</location>
+    </employee>
+    <employee id="222">
+        <firstName>Srinivas</firstName>
+        <lastName>Reddy</lastName>
+        <location>Russia</location>
+    </employee>
+    <employee id="333">
+        <firstName>Anupama</firstName>
+        <lastName>P</lastName>
+        <location>USA</location>
+    </employee>
+</employees>
